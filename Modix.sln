@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Modix", "Modix\Modix.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modix.Services.Test", "Modix.Services.Test\Modix.Services.Test.csproj", "{D9BFC7C7-10B2-4D61-99EA-79805074CCD7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Modix.Bot.Test", "Modix.Bot.Test\Modix.Bot.Test.csproj", "{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,6 +110,18 @@ Global
 		{D9BFC7C7-10B2-4D61-99EA-79805074CCD7}.Release|x64.Build.0 = Release|Any CPU
 		{D9BFC7C7-10B2-4D61-99EA-79805074CCD7}.Release|x86.ActiveCfg = Release|Any CPU
 		{D9BFC7C7-10B2-4D61-99EA-79805074CCD7}.Release|x86.Build.0 = Release|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Debug|x64.Build.0 = Debug|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Debug|x86.Build.0 = Debug|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Release|x64.ActiveCfg = Release|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Release|x64.Build.0 = Release|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Release|x86.ActiveCfg = Release|Any CPU
+		{4910B94D-3A0B-4B8E-BBE4-04469155E5FD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
