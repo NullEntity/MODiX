@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Discord;
 using Discord.Commands;
 using Microsoft.Extensions.DependencyInjection;
+using Modix.Bot.Test.Support;
 using Modix.Modules;
 using Modix.Services.Moderation;
 using Moq;

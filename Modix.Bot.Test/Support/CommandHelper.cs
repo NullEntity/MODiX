@@ -6,16 +6,17 @@ using Microsoft.Extensions.DependencyInjection;
 using Moq;
 using Shouldly;
 
-namespace Modix.Bot.Test
+namespace Modix.Bot.Test.Support
 {
     internal class CommandHelper
     {
-        public IServiceCollection Services { get; set; } = new ServiceCollection();
+        public IServiceCollection Services { get; } = new ServiceCollection();
 
         public async Task<string> GetCommandResponse<T>(string messageContent)
             where T : ModuleBase
         {
-            var provider = Services.BuildServiceProvider();
+            var provider = new CommandHelperServiceProvider(Services.BuildServiceProvider());
+
             var cs = new CommandService();
             await cs.AddModuleAsync<T>(provider);
 

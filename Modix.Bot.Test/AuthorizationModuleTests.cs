@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
+using Modix.Bot.Test.Support;
 using Modix.Data.Models.Core;
 using Modix.Modules;
 using Modix.Services.Core;
@@ -28,10 +29,10 @@ namespace Modix.Bot.Test
         public async Task ClaimsCommand_GivenUser_RepliesWithUserClaims()
         {
             var cmdHelper = new CommandHelper();
-            cmdHelper.Services.Add
+            await cmdHelper.GetCommandResponse<AuthorizationModule>("auth claims");
+            //cmdHelper.Services.AddSingleton(
+            //   Mock.Of<IAuthorizationService>(s => s.CurrentClaims == new[] {AuthorizationClaim.ModerationWarn}));
 
-            cmdHelper.Services.AddSingleton(
-                Mock.Of<IAuthorizationService>(s => s.CurrentClaims == new[] {AuthorizationClaim.ModerationWarn}));
         }
     }
 }
