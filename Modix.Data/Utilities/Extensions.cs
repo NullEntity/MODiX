@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Text.RegularExpressions;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Primitives;
 
 namespace Modix.Data.Utilities
 {
@@ -29,5 +34,9 @@ namespace Modix.Data.Utilities
 
         public static bool OrdinalEquals(this string value, string search)
             => string.Equals(value, search, StringComparison.OrdinalIgnoreCase);
+
+        public static Expression<Func<string, string, bool>> DbCaseInsensitiveContains = (value, search) =>
+            // % _ \ are special characters
+            EF.Functions.ILike(value, "%"+Regex.Replace(search, @"([\\%_])", @"\$1")+"%", @"\");
     }
 }
