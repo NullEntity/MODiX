@@ -193,8 +193,8 @@ namespace Modix.Data.Repositories
         /// <inheritdoc />
         public async Task<IReadOnlyCollection<InfractionSummary>> SearchSummariesAsync(InfractionSearchCriteria searchCriteria, IEnumerable<SortingCriteria>? sortingCriteria = null)
             => await ModixContext.Set<InfractionEntity>().AsNoTracking()
-                .FilterBy(searchCriteria)
                 .AsExpandable()
+                .FilterBy(searchCriteria)
                 .Select(InfractionSummary.FromEntityProjection)
                 .SortBy(sortingCriteria, InfractionSummary.SortablePropertyMap)
                 .ToArrayAsync();

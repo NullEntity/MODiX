@@ -9,7 +9,7 @@ namespace Modix.Data.Utilities
     public class ReusableQueries
     {
         public static readonly Expression<Func<GuildUserEntity, string, bool>> StringContainsUser =
-            (entity, str) => DbCaseInsensitiveEquals.Invoke(str, FormatUserName.Invoke(entity));
+            (entity, str) => DbCaseInsensitiveContains.Invoke(FormatUserName.Invoke(entity), str);
 
         public static readonly Expression<Func<GuildUserEntity, string>> FormatUserName =
             entity => entity.Nickname ?? (entity.User.Username + "#" + entity.User.Discriminator);
